@@ -11,7 +11,7 @@ export enum Collections {
 	Mfas = "_mfas",
 	Otps = "_otps",
 	Superusers = "_superusers",
-	Svg = "svg",
+	Svg = "svgs",
 	Users = "users",
 }
 
@@ -93,11 +93,12 @@ export type SuperusersRecord = {
 
 export type SvgRecord<Tchat_history = unknown> = {
 	chat_history?: null | Tchat_history
-	code_svg?: HTMLString
+	code?: HTMLString
 	created?: IsoDateString
 	id: string
-	nom?: string
+	name?: string
 	updated?: IsoDateString
+	user?: UsersRecord | null
 }
 
 export type UsersRecord = {
